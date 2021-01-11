@@ -14,6 +14,7 @@ APP.get('/', (req, res) => {
 });
 
 //sign routes organized by cardnality according to original calendar
+//Part one done, but now do i have to keep the element page and then render the controllers or remove the elements to make them controllers for just twelve signs?????
 
 //fire route
 APP.get('/fire', (req, res) => {
