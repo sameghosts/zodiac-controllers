@@ -13,7 +13,7 @@ APP.use(EXPRESS.static(PATH.join(__dirname, 'public')));
 APP.use('/fire', require('./controllers/fire'));
 APP.use('/water', require('./controllers/water'));
 APP.use('/air', require('./controllers/air'));
-// APP.use('/earth', require('./controllers/earth'));
+APP.use('/earth', require('./controllers/earth'));
 
 //home route
 APP.get('/', (req, res) => {
@@ -77,23 +77,23 @@ APP.get('/', (req, res) => {
 //   })
 // });
 //earth route
-APP.get('/earth', (req, res) => {
-  res.render('earth', {
-    earthSigns: [
-      'Capricorn (cardinal)', 
-      'Taurus (fixed)',
-      'Virgo (mutable)'
-    ],
-    traits: [
-      'Grounded',
-      'Helpful',
-      'Practical',
-      'Realistic',
-      'Materialistic',
-      'Dependable'
-    ]
-  })
-});
+// APP.get('/earth', (req, res) => {
+//   res.render('earth', {
+//     earthSigns: [
+//       'Capricorn (cardinal)', 
+//       'Taurus (fixed)',
+//       'Virgo (mutable)'
+//     ],
+//     traits: [
+//       'Grounded',
+//       'Helpful',
+//       'Practical',
+//       'Realistic',
+//       'Materialistic',
+//       'Dependable'
+//     ]
+//   })
+// });
 
 
 APP.listen(8666);
