@@ -11,9 +11,14 @@ APP.use(EJSLAYOUTS);
 APP.get('/', (req, res) => {
   res.render('home');
 });
+
+//sign routes organized by cardnality according to original calendar
+
+//fire route
+APP.get('/', (req, res) =>)
+)
 //water route
 //air route
-//fire route
 //earth route
 
 APP.listen(8666);
