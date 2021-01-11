@@ -12,7 +12,7 @@ APP.use(EXPRESS.static(PATH.join(__dirname, 'public')));
 
 APP.use('/fire', require('./controllers/fire'));
 APP.use('/water', require('./controllers/water'));
-// APP.use('/air', require('./controllers/air'));
+APP.use('/air', require('./controllers/air'));
 // APP.use('/earth', require('./controllers/earth'));
 
 //home route
@@ -59,23 +59,23 @@ APP.get('/', (req, res) => {
 //   })
 // });
 //air route
-APP.get('/air', (req, res) => {
-  res.render('air', {
-    airSigns: [
-      'Libra (cardinal)', 
-      'Aquarius (fixed)',
-      'Gemini (mutable)'
-    ],
-    traits: [
-      'Movement',
-      'Creativity',
-      'Action',
-      'Adventure',
-      'Exciting',
-      'Easily Provoked'
-    ]
-  })
-});
+// APP.get('/air', (req, res) => {
+//   res.render('air', {
+//     airSigns: [
+//       'Libra (cardinal)', 
+//       'Aquarius (fixed)',
+//       'Gemini (mutable)'
+//     ],
+//     traits: [
+//       'Movement',
+//       'Creativity',
+//       'Action',
+//       'Adventure',
+//       'Exciting',
+//       'Easily Provoked'
+//     ]
+//   })
+// });
 //earth route
 APP.get('/earth', (req, res) => {
   res.render('earth', {
