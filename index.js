@@ -8,6 +8,13 @@ APP.set('view engine', 'ejs');
 APP.use(EJSLAYOUTS);
 APP.use(EXPRESS.static(PATH.join(__dirname, 'public')));
 
+//controllers
+
+APP.use('/fire', require('./controllers/fire'));
+APP.use('/water', require('./controllers/water'));
+// APP.use('/air', require('./controllers/air'));
+// APP.use('/earth', require('./controllers/earth'));
+
 //home route
 APP.get('/', (req, res) => {
   res.render('home');
@@ -15,42 +22,42 @@ APP.get('/', (req, res) => {
 
 //sign routes organized by cardnality according to original calendar
 
-//fire route
-APP.get('/fire', (req, res) => {
-  res.render('fire', {
-    fireSigns: [
-      'Aries (cardinal)', 
-      'Leo (fixed)', 
-      'Saggitarius (mutable)'
-    ], 
-    traits: [
-      'Passionate', 
-      'Strong Emotions', 
-      'Tempermental', 
-      'Energetic', 
-      'Accomplished', 
-      'Interesting'
-    ]
-  });
-});
+// //fire route
+// APP.get('/fire', (req, res) => {
+//   res.render('fire', {
+//     fireSigns: [
+//       'Aries (cardinal)', 
+//       'Leo (fixed)', 
+//       'Sagittarius (mutable)'
+//     ], 
+//     traits: [
+//       'Passionate', 
+//       'Strong Emotions', 
+//       'Tempermental', 
+//       'Energetic', 
+//       'Accomplished', 
+//       'Interesting'
+//     ]
+//   });
+// });
 //water route
-APP.get('/water', (req, res) => {
-  res.render('water', {
-    waterSigns: [
-      'Cancer (cardinal)', 
-      'Scorpio (fixed)',
-      'Pisces (mutable)'
-    ],
-    traits: [
-      'Private',
-      'Mysterious',
-      'Psychic',
-      'Charming',
-      'Emotional',
-      'Sensitive'
-    ]
-  })
-});
+// APP.get('/water', (req, res) => {
+//   res.render('water', {
+//     waterSigns: [
+//       'Cancer (cardinal)', 
+//       'Scorpio (fixed)',
+//       'Pisces (mutable)'
+//     ],
+//     traits: [
+//       'Private',
+//       'Mysterious',
+//       'Psychic',
+//       'Charming',
+//       'Emotional',
+//       'Sensitive'
+//     ]
+//   })
+// });
 //air route
 APP.get('/air', (req, res) => {
   res.render('air', {
